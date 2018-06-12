@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= erb :bootstrap %>
+        <title>로또번호추천</title>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+        <%= erb :nav %>
+        <p>로또 추천 번호</p>
+        <h3><%=@lotto%></h3>
+        <p>로또 당첨 번호</p>
+        <h3><%=@winner%> + <%=@bonus%></h3>
+        <h3>당신은 <%=@you%>입니다. </h3>
+    </body>
+</html>
