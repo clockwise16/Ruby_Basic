@@ -1,6 +1,6 @@
 180718
 
-# template
+# Template
 
 ### 샘플 템플릿을 기존 프로젝트에 적용해보기
 
@@ -8,7 +8,9 @@
 
 <오늘 배운 것과 강사님 자료 다른 부분>
 
-쓸 도구가 아직 준비가 안됐는데 쓰고 싶어하기 때문에 에러 발생. => 따라서 다음과 같이 수정
+만약 강사님 자료 참고할 경우,
+
+자바스크립트가 쓸 도구가 아직 준비가 안됐는데 쓰고 싶어하기 때문에 에러 발생. => 따라서 다음과 같이 수정
 
 ```
 # 다음 문항을 application.html.erb에서 잘라내서 index.html.erb 가장 아래에 붙여준다.
@@ -51,7 +53,8 @@
   // //= require popper	# 4.1 버전 사용시 삽입 or
   //= require bootstrap	# 입력
   
-  # 다른 기기에서도 다른 화면에서도 이쁘게 보고 싶으면 bootstrap 아래로 home.js를 다 붙여넣는다
+  # 다른 기기에서도 다른 화면에서도 이쁘게 보고 싶으면
+  # application.js - bootstrap 아래로 home.js를 다 붙여넣는다
   ```
 
 * `controller` 생성
@@ -66,9 +69,11 @@
   root 'home#index'
   ```
 
+
+
+
+
 ![1531876180819](https://user-images.githubusercontent.com/37928445/42853607-6fe97eb4-8a72-11e8-8ab2-8ad35edde503.png)
-
-
 
 * 테스트로 버튼 추가
 
@@ -78,7 +83,9 @@
 
   ![image](https://user-images.githubusercontent.com/37928445/42853984-9bd69d70-8a74-11e8-9c4f-a4913a096da3.png)
 
-* 크롬에서 실행한 `index.html` => 검사에서 스타일 시트 확인
+* 크롬에서 실행한 `index.html` => 검사에서 Stylesheets 확인
+
+  
 
   
 
@@ -130,9 +137,9 @@
                                                     home.scss ) # 주석 해체, js 수정   
   ```
 
-  * `.coffe` 자바 스크립트의 일종
-
 * `javascripts`폴더 =>`home.coffe`를 `home.js`로 수정, 내부 내용 삭제
+
+  * .coffe` 자바 스크립트의 일종
 
   
 
@@ -156,7 +163,7 @@
 
   ![image](https://user-images.githubusercontent.com/37928445/42854633-b7fc26f2-8a77-11e8-9e66-87ded7de17db.png)
 
-* 기존 사이트에 `home.scss` 적용된 모습 ( `precompile` 후 하나의 파일로 붙여 넣었다 )
+* 기존 사이트에 `home.scss` 적용된 모습 ( `precompile` 후 하나의 파일로 붙여 넣어졌다. )
 
 
 
@@ -165,14 +172,15 @@
 ![image](https://user-images.githubusercontent.com/37928445/42855411-6abad1c8-8a7b-11e8-96ed-64b48fcc5e77.png)
 
 * `Navbar` 적용 해보기
-
-  `Navbar` 부분 `index`에 붙여 넣기
+  * `Navbar` 부분 `index`에 붙여 넣기
 
 
 
 ![image](https://user-images.githubusercontent.com/37928445/42855483-ad6ae2b0-8a7b-11e8-80e1-c88bf4ba6217.png)
 
 * 자바스크립트 추가하기 (위 자바스크립트 모두 추가하면 됨)
+
+
 
 
 
@@ -187,6 +195,10 @@
  `rsconfig.js`도 추가할 것 (슬라이드 동작에 관여)
 
 자바스크립트 최종 추가 모습!
+
+
+
+
 
 * `home.js`에 추가 (확장자 빼고 파일명 추가)
 
@@ -209,13 +221,13 @@
 
 
 
-* 아이콘이미지가 뜨지 않는 상태 => 이미지 파일 추가하기
+
+
+* 에러 발생, 아이콘 이미지를 못 찾는 상태 => 이미지 파일 추가하기
 
   ![image](https://user-images.githubusercontent.com/37928445/42855785-1d0101bc-8a7d-11e8-9355-ec4c720a1f49.png)
 
   ![image](https://user-images.githubusercontent.com/37928445/42855850-5d160342-8a7d-11e8-82c7-2e92e8849e88.png)
-
-  
 
   ![image](https://user-images.githubusercontent.com/37928445/42855888-8e26cebc-8a7d-11e8-94b2-12ddb049cc58.png)
 
@@ -233,15 +245,17 @@
 
   ![image](https://user-images.githubusercontent.com/37928445/42859003-67de87d6-8a8c-11e8-9d88-ac7f482a674a.png)
 
-* Navbar를 index에서 분리하기
+* `Navbar`를 `index`에서 분리하기 (수정할 때 구분하기 쉽도록)
 
 
 
-![image](https://user-images.githubusercontent.com/37928445/42859025-9ce46fea-8a8c-11e8-8025-fa7eb7ac3e1d.png)
 
-* div application.html.erb로 이동 
 
-* 작성한 _nav.html.erb를 index로 불러오기
+![image](https://user-images.githubusercontent.com/37928445/42862522-d068981a-8a9a-11e8-958c-74f4a1cb475a.png)
+
+* `application.html.erb`에 `render` 추가, `views` 폴더에 `shared` 폴더 생성,` _nav.html.erb` 파일 생성
+
+* 작성한 `_nav.html.erb`를 `index`로 불러오기
 
   ```
   <div id="wrapper" class="wrapper clearfix">
@@ -257,11 +271,13 @@
 
 
 
+
+
 ![image](https://user-images.githubusercontent.com/37928445/42859837-57e3181c-8a8f-11e8-9043-4b0c4356ad2b.png)
 
 ![image](https://user-images.githubusercontent.com/37928445/42859565-bbcc2536-8a8e-11e8-84d5-993ff2cf553a.png)
 
-* 크롬 콘솔 폰트 error ( woff : web only font file ) 폰트 폴더 만들고 추가하기
+* 크롬 콘솔 =>  폰트 error ( woff : web only font file ) `fonts` 폴더 만들고 폰트 추가하기
 
 
 
@@ -287,7 +303,6 @@
   ```
   # url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), => 다음과 같이 변경
   font-url('fontawesome-webfont.ttf?v=4.6.3') format('truetype'),
-  
   ```
 
   
@@ -300,9 +315,13 @@
 
 
 
-* 사용자가 보고있는 사이즈가 몇인지 반응해서 배치해줌. (반응형 웹)
+* 사용자가 보고있는 사이즈가 몇인지 반응해서 배치해줌. (반응형 앱)
 
   ```
   # application.html.erb 에서 title 아래 붙여주기
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   ```
+
+  
+
+* 유료 템플릿 다운로드 : https://elements.envato.com/
